@@ -15,13 +15,13 @@ public class NicePlaceRepository {
     public static NicePlaceRepository getInstance() {
         if (instance == null){
             instance = new NicePlaceRepository();
+            setNicePlaces();
         }
 
         return instance;
     }
 
     public MutableLiveData<List<NicePlace>> getNicePlaces(){
-        setNicePlaces();
         MutableLiveData<List<NicePlace>> data = new MutableLiveData<>();
         data.setValue(dataSet);
 
