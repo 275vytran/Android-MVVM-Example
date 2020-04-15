@@ -12,7 +12,7 @@ public class NicePlaceRepository {
     private static NicePlaceRepository instance;
     private ArrayList<NicePlace> dataSet = new ArrayList<>();
 
-    public static NicePlaceRepository getInstance() {
+    public NicePlaceRepository getInstance() {
         if (instance == null){
             instance = new NicePlaceRepository();
             setNicePlaces();
