@@ -10,9 +10,9 @@ import java.util.List;
 public class NicePlaceRepository {
 
     private static NicePlaceRepository instance;
-    private ArrayList<NicePlace> dataSet = new ArrayList<>();
+    private static ArrayList<NicePlace> dataSet = new ArrayList<>();
 
-    public NicePlaceRepository getInstance() {
+    public static NicePlaceRepository getInstance() {
         if (instance == null){
             instance = new NicePlaceRepository();
             setNicePlaces();
@@ -28,7 +28,7 @@ public class NicePlaceRepository {
         return data;
     }
 
-    private void setNicePlaces() {
+    private static void setNicePlaces() {
         dataSet.add(
                 new NicePlace("https://c1.staticflickr.com/5/4636/25316407448_de5fbf183d_o.jpg",
                         "Havasu Falls")
