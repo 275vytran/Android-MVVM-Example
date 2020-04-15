@@ -20,8 +20,7 @@ public class MainActivityViewModel extends ViewModel {
         if (mNicePlaces != null) {
             return;
         }
-        NicePlaceRepository nicePlaceRepository = new NicePlaceRepository();
-        mRepo = nicePlaceRepository.getInstance();
+        mRepo = NicePlaceRepository.getInstance();
         mNicePlaces = mRepo.getNicePlaces();
     }
 
